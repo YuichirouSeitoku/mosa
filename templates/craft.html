@@ -9,9 +9,14 @@
     <h1>{{ title }}で出てくる工芸品</h1>
     {% for crafts in anime %}
     {% for craft,data in crafts.items() %}
-    <h2>{{craft}}</h2>
-    <img src={{data.img_link}} width="200">
-    <p>{{data.description}}</p>
+    <table>
+        <h2>{{craft}}</h2>
+        <tbody><tr>
+            <td><img src={{data.img_link}} width="200"></td>
+            <td>{{data.description}}</td>
+         </tr></tbody>
+   
+    </table>
     {% endfor %}
     {% endfor %}
 </body>
