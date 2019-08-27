@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>craft</title>
+</head>
+
+<body>
+    
+    <h1>{{ title }}で出てくる工芸品</h1>
+    {% for crafts in anime %}
+    {% for craft,data in crafts.items() %}
+    <h2>{{craft}}</h2>
+    <img src={{data.img_link}} width="200">
+    <p>{{data.description}}</p>
+    {% endfor %}
+    {% endfor %}
+</body>
+</html>
