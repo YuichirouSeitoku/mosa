@@ -9,11 +9,10 @@ def top_page():
     anime_link = read_json2("img_link","./static/json/anime.json")
     return render_template('top2.html',anime_link=anime_link)
 
-@app.route('/detail')
-def detail():
-    title = "法被の試着会"
+@app.route('/detail/<title>')
+def detail(title):
     details = read_json2(title,"./static/json/detail.json")
-    return render_template('detail-experience.html',details= details,title=title)
+    return render_template('detail.html',details= details,title=title)
 
 @app.route('/craft/<title>')
 def craft_view(title):

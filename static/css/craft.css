@@ -1,0 +1,12 @@
+.back{
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.block1{
+    display:grid;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #000000;
+    border-radius: 30px;
+    opacity: 1;
+}
