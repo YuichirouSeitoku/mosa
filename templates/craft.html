@@ -1,26 +1,43 @@
 <!DOCTYPE html>
+{% extends "bootstrap/base.html" %}
 <head>
     <meta charset="UTF-8">
     <title>craft</title>
 </head>
-
 <body>
     
     <h1>{{ title }}で出てくる工芸品</h1>
+    {% block content %}
+    {% block layout %}
+    <ul class="list-unstyled"></ul>
     {% for crafts in anime %}
     {% for craft,data in crafts.items() %}
+    <!--
     <h2>{{craft}}</h2>
     <table>
         <tr>
-            <td><img src={{data.img_link}} width="200"></td>
+            <td><img src={{data.img_link}} class="rounded" width = "200"></td>
             <td>
                 <p>{{data.description}}</p><br>
-                <button type=""button>{{craft}}体験申し込み</button>
+                <button type="button">{{craft}}体験申し込み</button>
             </td>
          </tr>
-   
     </table>
+    -->
+        <li class="media">
+            <img class="rounded" src={{data.img_link}} width = "200" alt="Generic placeholder image">
+            <div class="media-body">
+                <h5 class="mt-0 mb-1">{{craft}}</h5>
+                {% for line in data.description %}
+                <p>{{line}}</p>
+                {% endfor %}
+                <div text-align="right"><button type="button" class="btn btn-primary btn-lg">{{craft}}体験申し込み</button></div>
+            </div>
+        </li>
+        <br>
     {% endfor %}
     {% endfor %}
+    {% endblock %}
+    {% endblock %}
 </body>
 </html>
