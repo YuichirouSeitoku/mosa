@@ -8,6 +8,10 @@ bootstrap = Bootstrap(app)
 def hello_world():
     return render_template('template.html', my_string="Hello world", my_list=[0,1,2,3,4,5])
 
+@app.route('/detail')
+def detail():
+    return render_template('detail-experience.html')
+
 @app.route('/craft/<title>')
 def craft_view(title):
     anime = craft(title)
