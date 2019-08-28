@@ -15,7 +15,7 @@ def detail():
     return render_template('detail-experience.html',details= details,title=title)
 
 @app.route('/craft')
-def craft_view(title):
+def craft_view():
     title = "ハナヤマタ"
     anime = read_json(title,"./static/json/craft.json")
     return render_template('craft.html',anime=anime,title=title)
