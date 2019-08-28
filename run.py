@@ -13,7 +13,5 @@ def craft_view(title):
     anime = craft(title)
     return render_template('craft.html',anime=anime,title=title)
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)

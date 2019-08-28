@@ -6,16 +6,17 @@
 </head>
 <body>
     
-    <h1>{{ title }}で出てくる工芸品</h1>
+    
     {% block content %}
     {% block layout %}
+    <h1>{{ title }}で出てくる工芸品</h1>
     <ul class="list-unstyled"></ul>
     {% for crafts in anime %}
     {% for craft,data in crafts.items() %}
         <li class="media">
             <img class="rounded" src={{data.img_link}} width = "200" alt="Generic placeholder image">
             <div class="media-body">
-                <h5 class="mt-0 mb-1">{{craft}}</h5>
+                <h5 class="mt-0 mb-1">{{craft}}</h5><br>
                 {% for line in data.description %}
                 <p>{{line}}</p>
                 {% endfor %}
