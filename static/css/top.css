@@ -1,5 +1,5 @@
-.test img{
-    width: 200px;
+.toptoptop{
+    color: rebeccapurple !important; 
 }
 
 .message {
@@ -9,7 +9,7 @@
     display: none;
 }
 
-.grid4 {
+.grid_4 {
     display:grid;
     grid-template-columns:3fr 3fr 3fr 3fr;
 }

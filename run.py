@@ -11,7 +11,7 @@ def top_page():
 
 @app.route('/detail')
 def detail():
-    title = "法被の試着体験会"
+    title = "法被の試着会"
     details = read_json2(title,"./static/json/detail.json")
     return render_template('detail-experience.html',details= details,title=title)
 

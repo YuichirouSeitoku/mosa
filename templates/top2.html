@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends "bootstrap/base.html" %}
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -13,24 +14,57 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>人気のアニメ</h1>
-
-    <div class="grid4">
-        {% for title,link in anime_link.items()%}
-        <div class=test>
-        <h2>{{title}}</h2>
-        <img src={{link}} onclick=jump({{title|tojson}})>
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
-        {% endfor %}
-
-
+      </nav>
+      {% endblock %}
+      {% block content %}
+    <h1>人気のアニメ</h1>
     
+
+    <div class="container">
+      <div class="row">
+          {% for title,link in anime_link.items()%}
+          <div class="col">
+            <img src={{link}} onclick=jump({{title|tojson}}) width="200">
+            <p class="toptoptop">{{title}}</p>
+          </div>
+          {% endfor %}
+      </div>
     </div>
+    {% endblock %}
 <script>
 function jump(title){
   location.href="/craft/"+title;
 }
 </script>
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
