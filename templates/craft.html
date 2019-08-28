@@ -31,7 +31,7 @@
                 {% for line in data.description %}
                 <p>{{line}}</p>
                 {% endfor %}
-                <div text-align="right"><button type="button" class="btn btn-primary btn-lg">{{craft}}体験申し込み</button></div>
+                <input type="button"　onClick=junp_page({{craft}})  value={{craft}}の体験申し込み class="btn btn-primary btn-lg">
             </div>
         </li>
         <br>
