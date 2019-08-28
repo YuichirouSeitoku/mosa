@@ -1,0 +1,23 @@
+.height-container{
+ height:1100px
+}
+
+.main-container{
+ display:grid;
+ grid-template-rows:3fr 9fr;
+ }
+
+.second-container{
+ display:grid;
+ grid-template-columns:8fr 4fr;
+}
+
+.third-container{
+ display:grid;
+ grid-template-rows:6fr 6fr;
+}
+
+.top-image{
+ width:max-width;
+ height:auto;
+ }
