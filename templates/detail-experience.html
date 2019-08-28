@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/detail-experience.css">
+  </head>
+  <body>
+    <!--header>
+     <p>サイトの名前</p>
+    </header-->
+    <div class="containerA">
+      <div>
+        <h1>{{ title }}</h1>
+      </div>
+      <div class="containerB">
+        <div>
+          <img src={{details.img_link}} width = "200">
+        </div>
+        <div>
+          <h3>{{details.sub_title}}</h3>
+          {% for detail in details.description %}
+          <p>{{detail}}</p>
+          {% endfor %}
+          <input type="button" value="応募する" onClick=junp_page()>
+        </div>
+      </div>
+    </div>
+   <script>
+   function junp_page(){
+    location.href = "https://docs.google.com/forms/d/1v3fVn2z8c9IfnjiXJyQA_1dEu7MAmtefl3ErtT__fWM/edit";
+   }
+   </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+.containerA{
+  display:grid;
+  grid-template-rows:2fr 10fr;
+}
+.containerB{
+  display:grid;
+  grid-template-columns:6fr 6fr;
+}

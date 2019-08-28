@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # mosa cup
 ## すみっこヤドンチーム
 member: 
@@ -11,3 +12,6 @@ pip install jinja2
 ## 起動  
 `python run.py`  
 http://127.0.0.1:5000 へアクセス  
+=======
+# mosa
+>>>>>>> develop
