@@ -19,9 +19,14 @@
           {% for detail in details.description %}
           <p>{{detail}}</p>
           {% endfor %}
-          <input type="button" value="応募する">
+          <input type="button" value="応募する" onClick=junp_page()>
         </div>
       </div>
     </div>
+   <script>
+   function junp_page(){
+    location.href = "https://docs.google.com/forms/d/1v3fVn2z8c9IfnjiXJyQA_1dEu7MAmtefl3ErtT__fWM/edit";
+   }
+   </script>
   </body>
 </html>

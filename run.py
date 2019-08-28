@@ -6,7 +6,7 @@ bootstrap = Bootstrap(app)
 
 @app.route('/')
 def hello_world():
-    return render_template('template.html', my_string="Hello world", my_list=[0,1,2,3,4,5])
+    return render_template('top2.html')
 
 @app.route('/detail')
 def detail():
@@ -14,8 +14,9 @@ def detail():
     details = read_json2(title,"./static/json/detail.json")
     return render_template('detail-experience.html',details= details,title=title)
 
-@app.route('/craft/<title>')
+@app.route('/craft')
 def craft_view(title):
+    title = "ハナヤマタ"
     anime = read_json(title,"./static/json/craft.json")
     return render_template('craft.html',anime=anime,title=title)
 
