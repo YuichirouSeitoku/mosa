@@ -8,16 +8,17 @@
     </header-->
     <div class="containerA">
       <div>
-        <h1>日帰りで陶芸体験</h1>
+        <h1>{{ title }}</h1>
       </div>
       <div class="containerB">
         <div>
-          <img src="/static/images/test.jpg">
+          <img src={{details.img_link}} width = "200">
         </div>
         <div>
-          <h3>タイトル</h3>
-          <p>これはテストです。ここには体験の内容をつらつらと書く予定です。わああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
+          <h3>{{details.sub_title}}</h3>
+          {% for detail in details.description %}
+          <p>{{detail}}</p>
+          {% endfor %}
           <input type="button" value="応募する">
         </div>
       </div>
