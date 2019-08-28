@@ -12,18 +12,6 @@
     <ul class="list-unstyled"></ul>
     {% for crafts in anime %}
     {% for craft,data in crafts.items() %}
-    <!--
-    <h2>{{craft}}</h2>
-    <table>
-        <tr>
-            <td><img src={{data.img_link}} class="rounded" width = "200"></td>
-            <td>
-                <p>{{data.description}}</p><br>
-                <button type="button">{{craft}}体験申し込み</button>
-            </td>
-         </tr>
-    </table>
-    -->
         <li class="media">
             <img class="rounded" src={{data.img_link}} width = "200" alt="Generic placeholder image">
             <div class="media-body">
