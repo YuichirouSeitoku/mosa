@@ -9,12 +9,15 @@
     <h1>{{ title }}で出てくる工芸品</h1>
     {% for crafts in anime %}
     {% for craft,data in crafts.items() %}
+    <h2>{{craft}}</h2>
     <table>
-        <h2>{{craft}}</h2>
-        <tbody><tr>
+        <tr>
             <td><img src={{data.img_link}} width="200"></td>
-            <td>{{data.description}}</td>
-         </tr></tbody>
+            <td>
+                <p>{{data.description}}</p><br>
+                <button type=""button>{{craft}}体験申し込み</button>
+            </td>
+         </tr>
    
     </table>
     {% endfor %}
