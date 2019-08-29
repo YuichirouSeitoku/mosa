@@ -1,0 +1,28 @@
+.high-container{
+ height:1100px;
+}
+
+.main-container{
+ display:grid;
+ grid-template-rows:6fr 6fr;
+}
+
+.second-container{
+ display:flex;
+ flex-direction:row;
+ }
+
+ .padding{
+  padding: 0px 80px 0px 80px;
+ }
+
+ .box{
+ border:solid 2px white;
+ border-radius:25px 25px 25px 25px;
+ box-shadow:2px 2px 2px 2px;
+ margin:0px 80px 0px 0px;
+}
+
+.box-img{
+ border-radius:25px 25px 0px 0px;
+ }

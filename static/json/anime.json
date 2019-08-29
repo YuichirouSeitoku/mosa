@@ -1,0 +1,8 @@
+{
+    "img_link":{
+        "ハナヤマタ":"./static/images/hanayamata.jpg",
+        "刀剣乱舞":"./static/images/toukenranbu.jpg",
+        "ガルパン":"./static/images/garupan.jpg",
+        "変好き":"./static/images/hensuki.jpg"
+    }
+}

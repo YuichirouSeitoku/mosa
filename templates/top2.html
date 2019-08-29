@@ -2,47 +2,38 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="stylesheet" href="../static/css/top.css">
+<link rel="stylesheet" href="./static/css/top2.css">
     
     
 <title>アニメ工芸品のトップページ</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>アニメ工芸品トップページ</h1>
-
-    <div class="hoge">
-
-         <div class = "test">
-          <p>ハナヤマタ</p>
-          <img src="./static/images/naruko.png" onclick="location.href='craft'" alt="アニメの写真" title="アニメの写真">
+    <div class="high-container">
+      <div class="main-container">
+        <div>
+          <img src="./static/images/title.jpg">
+	</div>
+        <div class="padding" >
+	    <div>
+	      <h1>好きなアニメから検索する</h1>
+	    </div>
+            <div class="second-container">
+              {% for title,link in anime_link.items()%}
+              <div class="box">
+                <img src={{link}} onclick=jump({{title|tojson}}) width="300" class="box-img">
+                <p class="toptoptop">{{title}}</p>
+              </div>
+              {% endfor %}
+	    </div>
         </div>
-        
-        <div class = "test">
-          <p>アニメタイトル2</p>
-          <img src="images/anime2.jpg" alt="アニメの写真" title="アニメの写真">
-        </div>
-
-        <div class = "test">
-          <p>アニメタイトル3</p>
-          <img src="images/anime3.jpg" alt="アニメの写真" title="アニメの写真">
-        </div>
-
-        </div>
-
+      </div>
     </div>
 
-  <div class = "test">
-        <p>アニメタイトル4</p>
-<img src="images/anime4.jpeg" alt="アニメの写真" title="アニメの写真">
-
-
-</div>
-
+<script>
+function jump(title){
+  location.href="/craft/"+title;
+}
+</script>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

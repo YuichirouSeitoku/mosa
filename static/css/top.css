@@ -1,5 +1,5 @@
-.test img{
-    width: 200px;
+.toptoptop{
+    color: rebeccapurple !important; 
 }
 
 .message {
@@ -9,9 +9,9 @@
     display: none;
 }
 
-.hoge {
+.grid_4 {
     display:grid;
-    grid-template-columns:4fr 4fr 4fr;
+    grid-template-columns:3fr 3fr 3fr 3fr;
 }
 .message a:hover span.remark {
     background: none repeat scroll 0 0 #EEFFEE;
