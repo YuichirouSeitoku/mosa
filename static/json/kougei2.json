@@ -1,0 +1,15 @@
+{   "陶芸":{
+        "陶芸体験1":{
+        "img_link":"/static/images/tougei.jpg",
+        "description":"大洗で笠陶芸を体験してみませんか?"
+        },
+        "陶芸体験2":{
+            "img_link":"/static/images/tougei2.jpg",
+            "description":"東京で気軽に陶芸を体験できます。木になる方はぜひ、詳細をみてください。"
+            },
+        "陶芸体験3":{
+            "img_link":"/static/images/tougei3.jpg",
+            "description":"東京、福岡、京都それぞれで体験コースを準備しています。"
+        }
+    }    
+}

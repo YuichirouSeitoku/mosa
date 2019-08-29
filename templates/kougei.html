@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>craft</title>
+    <link rel="stylesheet" href="../static/css/craft.css">
+</head>
+<body class="back">
+  <div class="padding1">
+
+    <h1>{{ title }}の体験一覧</h1>
+    {% for crafts in anime %}
+    {% for craft,data in crafts.items() %}
+    <div class="block1">
+            <div class="grid_img"><img src={{data.img_link}} width=200 class="radius"></div>
+            <div class="grid_title"><h2 class="h2_format">{{craft}}</h2></div>
+            <div class="grid_desc"><p>{{data.description}}</p></div>
+            <div class="grid_button"><a role="button" onclick=junp_page({{title|tojson}}) class="btn-square-so-pop">{{craft}}の体験申し込み</a></div>       
+    </div>
+
+        <br>
+    {% endfor %}
+    {% endfor %}
+  </div>
+    <script>
+    function junp_page(craft){
+        location.href = "/detail/"+craft;
+    }
+    </script>
+
+
+</body>
+</html>

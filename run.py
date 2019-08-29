@@ -19,5 +19,10 @@ def craft_view(title):
     anime = read_json(title,"./static/json/craft.json")
     return render_template('craft.html',anime=anime,title=title)
 
+@app.route('/kougei/<title>')
+def kougi_view(title):
+    anime = read_json(title,"./static/json/kougei2.json")
+    return render_template('kougei.html',anime=anime,title=title)
+
 if __name__ == '__main__':
     app.run(debug=True)
