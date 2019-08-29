@@ -1,7 +1,15 @@
-.height-container{
+.height-container11{
  height:750px
 }
+.grid1{
+ display:grid;
+ grid-template-rows:6fr 6fr;
+ }
 
+ .img-potision{
+  position:relative;
+  left: 200;
+ }
 .main-container{
  display:grid;
  grid-template-rows:3fr 9fr;
@@ -23,11 +31,11 @@
  }
 
 .fontsize{
-    font-size: 40px;
+    font-size: 15px;
 }
 
 .fontsize2{
-    font-size: 30px;
+    font-size: 15px;
 }
 .img1{
     margin-bottom: 20px;
@@ -37,11 +45,11 @@
 }
 .img1 img{width:calc(100%/2);}
 .padding1{
-    padding:0px 0px 0px 300px;
+    padding:0px 0px 0px 30px;
 }
 
 .padding2{
-    padding:0px 300px 0px 0px;
+    padding:0px 30px 0px 0px;
 }
 
 .inline-block_test{
@@ -56,7 +64,7 @@
 
 
 .square_blue1{
-    width:1000px;
+    width:1000p15;
     height:10px;
     background: #ba2636;
 }
@@ -79,16 +87,16 @@
 
 
 .moji_size1{
-    font-size : 60px;
+    font-size : 20px;
 }
 
 
 .fontsize3{
-    font-size : 80px;
+    font-size : 40px;
 }
 
 .img_size2{
-    width: 100px;
+    width: 50px;
     position: relative;
     top: 15px;
 }
@@ -110,13 +118,11 @@
 .position3{
     position:relative;
     top: 830px;
-
-    
 }
 
 .position4{
     position:relative;
-    top: -500px;
+    top: -200px;
     right: -200px
 }
 
