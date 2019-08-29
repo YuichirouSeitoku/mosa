@@ -7,7 +7,8 @@ bootstrap = Bootstrap(app)
 @app.route('/')
 def top_page():
     anime_link = read_json2("img_link","./static/json/anime.json")
-    return render_template('top2.html',anime_link=anime_link)
+    kougei_link = read_json2("img_link","./static/json/kougei.json")
+    return render_template('top2.html',anime_link=anime_link,kougei_link=kougei_link)
 
 @app.route('/detail/<title>')
 def detail(title):

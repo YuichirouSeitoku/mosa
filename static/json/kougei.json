@@ -1,0 +1,8 @@
+{
+    "img_link":{
+        "法被":"./static/images/hanayamata.jpg",
+        "日本刀":"./static/images/toukenranbu.jpg",
+        "陶芸":"./static/images/garupan.jpg",
+        "書道":"./static/images/hensuki.jpg"
+    }
+}

@@ -24,6 +24,17 @@
                 <p class="toptoptop">{{title}}</p>
               </div>
               {% endfor %}
+      </div>
+      <div>
+	      <h1>工芸から検索する</h1>
+	    </div>
+            <div class="second-container">
+              {% for title,link in kougei_link.items()%}
+              <div class="box">
+                <img src={{link}} onclick=jump2({{title|tojson}}) width="300" class="box-img">
+                <p class="toptoptop">{{title}}</p>
+              </div>
+              {% endfor %}
 	    </div>
         </div>
       </div>
@@ -34,6 +45,11 @@ function jump(title){
   location.href="/craft/"+title;
 }
 </script>
+<script>
+  function jump2(title){
+    location.href="/kougei/"+title;
+  }
+  </script>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
