@@ -1,5 +1,5 @@
 .height-container{
- height:1100px
+ height:750px
 }
 
 .main-container{
@@ -21,3 +21,106 @@
  width:max-width;
  height:auto;
  }
+
+.fontsize{
+    font-size: 40px;
+}
+
+.fontsize2{
+    font-size: 30px;
+}
+.img1{
+    margin-bottom: 20px;
+    display:-webkit-flex;
+    display:flex
+    
+}
+.img1 img{width:calc(100%/2);}
+.padding1{
+    padding:0px 0px 0px 300px;
+}
+
+.padding2{
+    padding:0px 300px 0px 0px;
+}
+
+.inline-block_test{
+    display: inline-block;
+}
+
+.moji_color1{
+    color: #e6b422;
+    font-weight: bold;
+}
+
+
+
+.square_blue1{
+    width:1000px;
+    height:10px;
+    background: #ba2636;
+}
+
+.square_blue2{
+    width:1100px;
+    height:10px;
+    background: #ba2636;
+}
+
+.square_blue3{
+    width:1100px;
+    height:10px;
+    background: #ba2636;
+}
+
+.moji_color2{
+    color: #ba2636;
+}
+
+
+.moji_size1{
+    font-size : 60px;
+}
+
+
+.fontsize3{
+    font-size : 80px;
+}
+
+.img_size2{
+    width: 100px;
+    position: relative;
+    top: 15px;
+}
+
+.position1{
+    position:relative;
+    top: 850px;
+
+    
+}
+
+.position2{
+    position:relative;
+    top: 1400px;
+
+    
+}
+
+.position3{
+    position:relative;
+    top: 830px;
+
+    
+}
+
+.position4{
+    position:relative;
+    top: -500px;
+    right: -200px
+}
+
+
+
+
+
