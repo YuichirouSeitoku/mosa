@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-{% extends "bootstrap/base.html" %}
 <head>
     <meta charset="UTF-8">
     <title>craft</title>
+    <link rel="stylesheet" href="../static/css/craft.css">
 </head>
-<body>
-    
-    
-    {% block content %}
-    {% block layout %}
+<body class="back">
+  <div class="padding1">
+
     <h1>{{ title }}で出てくる工芸品</h1>
-    <ul class="list-unstyled"></ul>
     {% for crafts in anime %}
     {% for craft,data in crafts.items() %}
-        <li class="media">
-            <img class="rounded" src={{data.img_link}} width = "200" alt="Generic placeholder image">
-            <div class="media-body">
-                <h5 class="mt-0 mb-1">{{craft}}</h5><br>
-                {% for line in data.description %}
-                <p>{{line}}</p>
-                {% endfor %}
-                <input type="button" onclick="location.href='detail'" value={{craft}}の体験申し込み class="btn btn-primary btn-lg">
-            </div>
-        </li>
+    <div class="block1">
+            <div class="grid_img"><img src={{data.img_link}} width=200 class="radius"></div>
+            <div class="grid_title"><h2 class="h2_format">{{craft}}</h2></div>
+            <div class="grid_desc"><p>{{data.description}}</p></div>
+            <div class="grid_button"><a role="button" onclick=junp_page() class="btn-square-so-pop">{{craft}}の体験申し込み</a></div>       
+    </div>
+
         <br>
     {% endfor %}
     {% endfor %}
-    {% endblock %}
-    {% endblock %}
+  </div>
     <script>
-            function junp_page(){
-                console.log("aaaa");
-             location.href = "/detail";
-            }
+    function junp_page(){
+        location.href = "/detail/陶芸体験";
+    }
     </script>
+
+
 </body>
 </html>
